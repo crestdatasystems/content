@@ -19,6 +19,7 @@ DEFAULT_HEADERS = {'Content-Type': 'application/x-www-form-urlencoded'}
 MULTIPART_HEADERS = {'Content-Type': "multipart/form-data; boundary=upload_boundry"}
 
 if URL and not URL.endswith('/publicapi'):
+
     if URL[-1] != '/':
         URL += '/'
     URL += 'publicapi'

@@ -8,6 +8,7 @@ from typing import Any, Tuple, Optional
 
 
 CONTEXT_PREFIX = "TAXII2"
+
 COMPLEX_OBSERVATION_MODE_SKIP = "Skip indicators with more than a single observation"
 COMPLEX_OBSERVATION_MODE_CREATE_ALL = "Create indicator for each observation"
 

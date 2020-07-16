@@ -6,6 +6,7 @@ from JSONFeedApiModule import *  # noqa: E402
 
 def test_module(client, params) -> str:  # type: ignore  # pylint: disable=function-redefined
     client.build_iterator()
+
     return 'ok'
 
 
