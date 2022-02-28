@@ -1,5 +1,5 @@
 flake8==3.9.2
-bandit==1.7.0
+bandit==1.7.3
 demisto-py>=3.0.2
 demisto-sdk==1.6.1
 pytest==6.2.1
