@@ -1526,7 +1526,7 @@ pytest = ">=3.0.0"
 
 [[package]]
 name = "pytest-mock"
-version = "3.8.1"
+version = "3.8.2"
 description = "Thin-wrapper around the mock package for easier use with pytest"
 category = "main"
 optional = false
@@ -2204,7 +2204,7 @@ build = ["google-cloud-bigquery"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8,<3.11"
-content-hash = "aa57db38f326d78d00b2f1403e826578d25ac619d1960330c56a2ec413b75988"
+content-hash = "4e26aa8342b3fc65644a1e7c11a01a5f2488ce7df335df2f333824e4fae0755f"
 
 [metadata.files]
 aiohttp = [
@@ -3304,8 +3304,8 @@ pytest-freezegun = [
     {file = "pytest_freezegun-0.4.2-py2.py3-none-any.whl", hash = "sha256:5318a6bfb8ba4b709c8471c94d0033113877b3ee02da5bfcd917c1889cde99a7"},
 ]
 pytest-mock = [
-    {file = "pytest-mock-3.8.1.tar.gz", hash = "sha256:2c6d756d5d3bf98e2e80797a959ca7f81f479e7d1f5f571611b0fdd6d1745240"},
-    {file = "pytest_mock-3.8.1-py3-none-any.whl", hash = "sha256:d989f11ca4a84479e288b0cd1e6769d6ad0d3d7743dcc75e460d1416a5f2135a"},
+    {file = "pytest-mock-3.8.2.tar.gz", hash = "sha256:77f03f4554392558700295e05aed0b1096a20d4a60a4f3ddcde58b0c31c8fca2"},
+    {file = "pytest_mock-3.8.2-py3-none-any.whl", hash = "sha256:8a9e226d6c0ef09fcf20c94eb3405c388af438a90f3e39687f84166da82d5948"},
 ]
 python-daemon = [
     {file = "python-daemon-2.3.0.tar.gz", hash = "sha256:bda993f1623b1197699716d68d983bb580043cf2b8a66a01274d9b8297b0aeaf"},
