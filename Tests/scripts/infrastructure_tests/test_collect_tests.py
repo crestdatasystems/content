@@ -12,7 +12,7 @@ from Tests.scripts.collect_tests.collect_tests import (
     XSOARNightlyTestCollector, UploadAllCollector)
 from Tests.scripts.collect_tests.constants import (
     ALWAYS_INSTALLED_PACKS_MARKETPLACE_V2, MODELING_RULE_COMPONENT_FILES,
-    XSOAR_SANITY_TEST_NAMES, ONLY_INSTALL_PACK_FILE_TYPES)
+    XSOAR_SANITY_TEST_NAMES, ONLY_INSTALL_PACK_FILE_TYPES, XSIAM_COMPONENT_FILES)
 from Tests.scripts.collect_tests.path_manager import PathManager
 from Tests.scripts.collect_tests.utils import FilesToCollect, PackManager
 
@@ -498,6 +498,8 @@ ONLY_COLLECT_PACK_TYPES = {
     FileType.MODELING_RULE_SCHEMA,
     FileType.LAYOUTS_CONTAINER,
     FileType.XDRC_TEMPLATE,
+    FileType.PARSING_RULE_XIF,
+    FileType.LAYOUT_RULE,
 }
 
 
@@ -563,8 +565,8 @@ def test_only_collect_pack(mocker, monkeypatch, file_type: collect_tests.FileTyp
                         return_value=FilesToCollect(('Packs/myPack/some_file',), ()))
     mocker.patch('Tests.scripts.collect_tests.collect_tests.find_type', return_value=file_type)
 
-    # packs of modeling rules aren't expected to be collected when collecting for an XSOAR marketplace build
-    expected_packs = ('myPack',) if file_type not in MODELING_RULE_COMPONENT_FILES else ()
+    # packs of xsiam component files aren't expected to be collected when collecting for an XSOAR marketplace build
+    expected_packs = ('myPack',) if file_type not in (MODELING_RULE_COMPONENT_FILES | XSIAM_COMPONENT_FILES) else ()
 
     # noinspection PyTypeChecker
     _test(monkeypatch, case_mocker=MockerCases.H, collector_class=BranchTestCollector,
@@ -608,7 +610,7 @@ def test_number_of_file_types():
 
         - Removed type:    Decrease the number here.
     """
-    assert len(FileType) == 74
+    assert len(FileType) == 76
 
 
 @pytest.mark.parametrize(
