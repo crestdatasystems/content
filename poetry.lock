@@ -284,7 +284,7 @@ version = "2.0.0"
 description = "Foreign Function Interface for Python calling C code."
 optional = false
 python-versions = ">=3.9"
-groups = ["dev", "github-actions"]
+groups = ["dev", "github-actions", "typing"]
 markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "cffi-2.0.0-cp310-cp310-macosx_10_13_x86_64.whl", hash = "sha256:0cf2d91ecc3fcc0625c2c530fe004f82c110405f101548512cce44322fa8ac44"},
@@ -590,7 +590,7 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-markers = {dev = "sys_platform == \"win32\" or platform_system == \"Windows\"", github-actions = "sys_platform == \"win32\""}
+markers = {dev = "platform_system == \"Windows\" or sys_platform == \"win32\"", github-actions = "sys_platform == \"win32\""}
 
 [package.source]
 type = "legacy"
@@ -717,7 +717,7 @@ version = "48.0.0"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
 optional = false
 python-versions = ">=3.9, !=3.9.0, !=3.9.1"
-groups = ["dev", "github-actions"]
+groups = ["dev", "github-actions", "typing"]
 files = [
     {file = "cryptography-48.0.0-cp311-abi3-macosx_10_9_universal2.whl", hash = "sha256:0c558d2cdffd8f4bbb30fc7134c74d2ca9a476f830bb053074498fbc86f41ed6"},
     {file = "cryptography-48.0.0-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:f5333311663ea94f75dd408665686aaf426563556bb5283554a3539177e03b8c"},
@@ -2889,7 +2889,7 @@ version = "3.0"
 description = "C parser in Python"
 optional = false
 python-versions = ">=3.10"
-groups = ["dev", "github-actions"]
+groups = ["dev", "github-actions", "typing"]
 markers = "platform_python_implementation != \"PyPy\" and implementation_name != \"PyPy\""
 files = [
     {file = "pycparser-3.0-py3-none-any.whl", hash = "sha256:b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992"},
@@ -4390,23 +4390,6 @@ url = "https://pypi.org/simple"
 reference = "pypi-public"
 
 [[package]]
-name = "types-cryptography"
-version = "3.3.23.2"
-description = "Typing stubs for cryptography"
-optional = false
-python-versions = "*"
-groups = ["typing"]
-files = [
-    {file = "types-cryptography-3.3.23.2.tar.gz", hash = "sha256:09cc53f273dd4d8c29fa7ad11fefd9b734126d467960162397bc5e3e604dea75"},
-    {file = "types_cryptography-3.3.23.2-py3-none-any.whl", hash = "sha256:b965d548f148f8e87f353ccf2b7bd92719fdf6c845ff7cedf2abb393a0643e4f"},
-]
-
-[package.source]
-type = "legacy"
-url = "https://pypi.org/simple"
-reference = "pypi-public"
-
-[[package]]
 name = "types-dateparser"
 version = "1.4.0.20260508"
 description = "Typing stubs for dateparser"
@@ -4493,18 +4476,18 @@ reference = "pypi-public"
 
 [[package]]
 name = "types-paramiko"
-version = "2.12.0.0"
+version = "4.0.0.20260518"
 description = "Typing stubs for paramiko"
 optional = false
-python-versions = "*"
+python-versions = ">=3.10"
 groups = ["typing"]
 files = [
-    {file = "types-paramiko-2.12.0.0.tar.gz", hash = "sha256:6359f4e8885bf0e2e478eddbfeb06d9b9599a2a8eb7815ee463800d365d20894"},
-    {file = "types_paramiko-2.12.0.0-py3-none-any.whl", hash = "sha256:49d7a323dda2d3e9b334e3828e4cb0c50deaa1b060fcfbd6634fc46c9eb28da1"},
+    {file = "types_paramiko-4.0.0.20260518-py3-none-any.whl", hash = "sha256:0ffaf1a6eb796833a49653cba4c7be13af51c8269d75234972d6239763dda270"},
+    {file = "types_paramiko-4.0.0.20260518.tar.gz", hash = "sha256:286f6830945cba63797eedf375ed87138d93198121253afe66c5d6dbcf91318d"},
 ]
 
 [package.dependencies]
-types-cryptography = "*"
+cryptography = ">=37.0.0"
 
 [package.source]
 type = "legacy"
@@ -5092,4 +5075,4 @@ reference = "pypi-public"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.15"
-content-hash = "7313e4cc4053af73f10a7c9899d721500db7acd38fa9076c675ac5d6c0ae0e08"
+content-hash = "e2d01e3cdc4c77f2aa0f956694c863103cb4693658c9b266f1487281e6ff0544"
