@@ -109,7 +109,7 @@ jobs:
         github.event.pull_request.head.repo.fork == false
 
     - name: Upload junit & pack-wise pytest report
-      uses: PaloAltoNetworks/upload-secure-artifact@63ccdaa66407a7684b429eac22cd0e773308d2a9 # v1.0.6
+      uses: PaloAltoNetworks/upload-secure-artifact@b4ca6546db57dc70dced3c2e684c78964828ea4e # v1.0.7
       if: |
         always() && 
         steps.check-pytest-junit-exists.outputs.files_exists == 'true' && 
