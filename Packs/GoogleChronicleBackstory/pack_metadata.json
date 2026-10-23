@@ -5,8 +5,8 @@
     "currentVersion": "6.0.2",
     "certification": "certified",
     "author": "Google",
-    "url": "https://go.chronicle.security/contact",
-    "email": "chronicle-support@chronicle.security",
+    "url": "https://cloud.google.com/contact/security",
+    "email": "google.secops.xsoar@crestdata.ai",
     "categories": [
         "Analytics & SIEM"
     ],
